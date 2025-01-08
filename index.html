@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="SONOSAKI - Accesorios y ropa moderna estilo Y2K. Descubre nuestras últimas colecciones.">
     <title>SONOSAKI</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://placehold.co/100x100/333/fff?text=S" type="image/png">
 </head>
 <body>
 
     <!-- HEADER -->
     <header>
         <div class="logo">
-            <h1>SONOSAKI</h1>
+            <img src="https://via.placeholder.com/150x50?text=SONOSAKI+Logo" alt="Logo SONOSAKI">
         </div>
         <nav>
             <ul>
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#shop">Tienda</a></li>
                 <li><a href="#contact">Contacto</a></li>
+                <li><a href="#cart">Carrito</a></li>
             </ul>
         </nav>
     </header>
@@ -48,7 +51,12 @@
                 <p>$29.99</p>
                 <button class="add-to-cart" onclick="addToCart('Camiseta Moderna', 29.99)">Añadir al carrito</button>
             </div>
-            <!-- Puedes añadir más productos aquí -->
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="Pulsera Y2K">
+                <h3>Pulsera Y2K</h3>
+                <p>$9.99</p>
+                <button class="add-to-cart" onclick="addToCart('Pulsera Y2K', 9.99)">Añadir al carrito</button>
+            </div>
         </div>
     </section>
 
@@ -56,15 +64,32 @@
     <section id="cart" class="cart">
         <h2>Carrito de Compras</h2>
         <div id="cart-content">
-            <!-- El contenido del carrito será dinámico con JS -->
             <p>No hay productos en el carrito.</p>
         </div>
-        <button id="checkout" class="btn">Ir al checkout</button>
+        <button id="checkout" class="btn" disabled>Ir al checkout</button>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contact" class="contact">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta? ¡Escríbenos!</p>
+        <form>
+            <input type="text" placeholder="Tu Nombre" required>
+            <input type="email" placeholder="Tu Correo" required>
+            <textarea placeholder="Tu Mensaje" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 Tiendita Dropshipping. Todos los derechos reservados.</p>
+        <img src="https://via.placeholder.com/100x50?text=SONOSAKI" alt="SONOSAKI Logo Footer">
+        <p>&copy; 2025 SONOSAKI. Todos los derechos reservados.</p>
+        <div>
+            <a href="#">Instagram</a> | 
+            <a href="#">Facebook</a> | 
+            <a href="#">TikTok</a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
