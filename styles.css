@@ -7,10 +7,10 @@
 
 /* VARIABLES */
 :root {
-    --primary-color: #f78ca0;
-    --primary-hover: #ff6b81;
-    --secondary-color: #333;
-    --background-light: #f0f0f0;
+    --primary-color: #D63384;
+    --primary-hover: #D63384;
+    --secondary-color: #D63384;
+    --background-light: #00000;
     --text-color: #333;
 }
 
