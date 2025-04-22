@@ -3,103 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>¿Quién es Boumper X?</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #000;
-      color: #0ff;
-      font-family: 'Courier New', monospace;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    h1, p {
-      text-align: center;
-      margin: 0.5em;
-      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
-    }
-
-    .glitch {
-      animation: glitch 1s infinite;
-    }
-
-    @keyframes glitch {
-      0% { transform: translate(0); }
-      20% { transform: translate(-2px, 2px); }
-      40% { transform: translate(2px, -2px); }
-      60% { transform: translate(-1px, 1px); }
-      80% { transform: translate(1px, -1px); }
-      100% { transform: translate(0); }
-    }
-
-    .terminal-box {
-      background: rgba(0, 255, 255, 0.1);
-      border: 1px solid #0ff;
-      padding: 1em 2em;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #0ff2;
-      max-width: 90%;
-    }
-
-    .cursor {
-      display: inline-block;
-      width: 10px;
-      height: 20px;
-      background: #0ff;
-      animation: blink 0.7s infinite;
-      margin-left: 5px;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <audio id="bgAudio" src="audio/glitchtrap.mp3" loop></audio>
+  <button onclick="toggleAudio()" class="mute-btn">🔊</button>
+
   <div class="terminal-box">
     <h1 class="glitch">Boumper X</h1>
     <p id="typewriter"></p><span class="cursor"></span>
+
+    <div class="catalogo-botones">
+      <button onclick="window.location.href='LINK_TRAP'" class="btn">Catálogo Trap</button>
+      <button onclick="window.location.href='LINK_ELECTRONICA'" class="btn">Catálogo Electrónica</button>
+    </div>
   </div>
 
-  <script>
-    const lines = [
-      "Productor Musical.",
-      "Beatmaker.",
-      "Mezcla, Rec y Mastering.",
-      "Curso de Producción.",
-      "Set para eventos.",
-      "No rapeo. Hackeo métricas."
-    ];
-
-    let i = 0;
-    let j = 0;
-    let currentLine = '';
-    const speed = 50;
-    const element = document.getElementById("typewriter");
-
-    function type() {
-      if (j < lines[i].length) {
-        currentLine += lines[i].charAt(j);
-        element.innerHTML = currentLine;
-        j++;
-        setTimeout(type, speed);
-      } else {
-        setTimeout(() => {
-          currentLine = '';
-          j = 0;
-          i = (i + 1) % lines.length;
-          element.innerHTML = '';
-          setTimeout(type, 500);
-        }, 1500);
-      }
-    }
-
-    type();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
