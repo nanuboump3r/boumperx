@@ -4,7 +4,7 @@ const lines = [
     "Mezcla, Rec y Mastering.",
     "Curso de Producción.",
     "Set para eventos.",
-    "No rapeo. Hackeo métricas."
+    "Nanu Boumper EP Proximamente X_X."
   ];
   
   let i = 0;
